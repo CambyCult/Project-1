@@ -82,7 +82,7 @@ function updateGameArea() {
     }
     myGameArea.clear();
     myGameArea.frameNo += 1;
-    if (myGameArea.frameNo == 1 || everyinterval(150)) {
+    if (myGameArea.frameNo == 1 || everyinterval(50)) {
         x = myGameArea.canvas.width;
         minHeight = 20;
         maxHeight = 200;
@@ -94,7 +94,7 @@ function updateGameArea() {
         myObstacles.push(new component(10, x - height - gap, "green", x, height + gap));
     }
     for (i = 0; i < myObstacles.length; i += 1) {
-        myObstacles[i].speedX = -1;
+        myObstacles[i].speedX = -4;
         myObstacles[i].newPos();
         myObstacles[i].update();
     }
@@ -107,8 +107,8 @@ function updateGameArea() {
   myGamePiece.speedY = 0; 
   if (myGameArea.key && myGameArea.key == 37) {myGamePiece.speedX = -1; }
   if (myGameArea.key && myGameArea.key == 39) {myGamePiece.speedX = 1; }
-  if (myGameArea.key && myGameArea.key == 38) {myGamePiece.speedY = -1; }
-  if (myGameArea.key && myGameArea.key == 40) {myGamePiece.speedY = 1; }
+  if (myGameArea.key && myGameArea.key == 38) {myGamePiece.speedY = -5; }
+  if (myGameArea.key && myGameArea.key == 40) {myGamePiece.speedY = 5; }
 }
 
 function everyinterval(n) {
@@ -117,11 +117,11 @@ function everyinterval(n) {
 }
 
 function moveup() {
-    myGamePiece.speedY = -1; 
+    myGamePiece.speedY = -5; 
 }
 
 function movedown() {
-    myGamePiece.speedY = 1; 
+    myGamePiece.speedY = 5; 
 }
 
 function moveleft() {
