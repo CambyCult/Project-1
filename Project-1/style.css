@@ -1,0 +1,11 @@
+html{
+    height:100vh;
+    padding:0;
+    overflow:hidden;
+}
+body{
+    display:flex;
+    background-color:navy;
+    height:100vh;
+    padding:0;
+}
